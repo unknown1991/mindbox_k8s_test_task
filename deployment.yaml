@@ -64,11 +64,11 @@ spec:
     kind: Deployment
     name: mindbox
   minReplicas: 1
-  maxReplicas: 4 # по условию 4 пода справляются с максимальной нагрузкой
+  maxReplicas: 5 # по условию 3 пода справляются с максимальной нагрузкой. выбираем 5 на случай падения нод
   metrics:
     - type: Resource
       resource:
         name: cpu
         target:
           type: Utilization
-          averageUtilization: 90 # масштабируем при среднем потреблении цпу 90% от запрошенного (~ 0.108 cpu), т.e когда под начинает потреблять больше среднего.
+          averageUtilization: 75 # масштабируем при среднем потреблении цпу 75% от запрошенного.
