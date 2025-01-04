@@ -64,7 +64,7 @@ spec:
     kind: Deployment
     name: mindbox
   minReplicas: 1
-  maxReplicas: 5 # по условию 3 пода справляются с максимальной нагрузкой. выбираем 5 на случай падения нод
+  maxReplicas: 5 # по условию 4 пода справляются с максимальной нагрузкой. выбираем 5 на случай падения нод
   metrics:
     - type: Resource
       resource:
