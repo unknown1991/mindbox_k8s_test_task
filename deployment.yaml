@@ -76,7 +76,7 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: mindbox
-  minReplicas: 1
+  minReplicas: 2 # 2 потому что под может упасть и когда нет большой нагрузки 
   maxReplicas: 5 # по условию 4 пода справляются с максимальной нагрузкой. выбираем 5 на случай падения нод
   metrics:
     - type: Resource
